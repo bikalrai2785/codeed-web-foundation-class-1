@@ -1,0 +1,72 @@
+h1 {
+  background-color: skyblue;
+  color: greenyellow;
+}
+
+h2 {
+  font-size: 16px;
+  color: red;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: black;
+}
+
+p {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  font-style: italic;
+  letter-spacing: 2px;
+  line-height: 24px;
+  text-transform: capitalize;
+  text-align: justify;
+  text-decoration: overline wavy red;
+}
+
+a {
+  color: green;
+  text-decoration: none;
+}
+
+/* id selector */
+#h2 {
+  font-size: 30px;
+  background-color: orangered;
+  color: gray;
+}
+
+/* class selector */
+.h2 {
+  background-color: gainsboro;
+}
+
+.class {
+  text-transform: uppercase;
+}
+
+/* id selector has precedence over class and element selector */
+/* class selector has precedence over only element selector */
+#h4 {
+  color: crimson;
+}
+
+.h4 {
+  color: green;
+}
+
+h4 {
+  color: blue;
+}
+
+/* hierarchical selector */
+h5 {
+  color: green;
+}
+
+h5 p {
+  color: blue;
+}
+
+h5 p span {
+  color: red;
+  background-color: black;
+}
