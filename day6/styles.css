@@ -1,0 +1,137 @@
+.div1 {
+  background-color: red;
+  height: 50px;
+  width: 50px;
+
+  /* padding-top: 20px; */
+  /* padding-right: 30px; */
+  /* padding-bottom: 40px; */
+  /* padding-left: 50px; */
+
+  /* padding: 20px 30px 40px 50px; */
+  /* padding: 20px 30px 40px; */
+  /* padding: 20px 30px; */
+  padding: 20px;
+
+  /* border-width: 10px; */
+  /* border-style: dotted; */
+  /* border-color: black; */
+
+  border: 5px solid green;
+  border-top-style: dotted;
+  border-top-color: blue;
+
+  /* border-top-left-radius: 20px; */
+  /* border-top-right-radius: 40px; */
+  /* border-bottom-left-radius: 50px; */
+  /* border-bottom-right-radius: 60px; */
+
+  /* border-radius: 20px 30px 50px 60px; */
+  /* border-radius: 20px 30px 50px; */
+  /* border-radius: 20px 50px; */
+  /* border-radius: 20px; */
+  border-radius: 100%;
+
+  /* margin-top: 20px; */
+  /* margin-left: 20px; */
+  /* margin-right: 20px; */
+  /* margin-bottom: 20px; */
+
+  /* margin: 20px 30px 40px 60px; */
+  /* margin: 20px 30px 40px; */
+  /* margin: 20px 30px; */
+  /* margin: 20px; */
+  margin: 0 auto;
+}
+
+.div2 {
+  /* margin-top: 10px; */
+  background-color: skyblue;
+  height: 100px;
+  width: 100px;
+  padding: 20px;
+
+  /* box-sizing: content-box; */
+  box-sizing: border-box;
+}
+
+hr {
+  /* width: 10px; */
+  height: 2px;
+  background-color: blue;
+  border: none;
+}
+
+.div3 {
+  background-color: gray;
+  margin-bottom: 5px;
+  /* display: inline; */
+  display: inline-block;
+
+  height: 100px;
+  width: 100px;
+}
+
+span {
+  background-color: green;
+  display: block;
+  /* margin-left: 50px; */
+}
+
+/* CSS position */
+.parent {
+  border: 5px solid purple;
+  margin-bottom: 1000px;
+  position: relative;
+}
+
+.div4 {
+  background-color: green;
+  height: 50px;
+  width: 50px;
+  /* position: static; */
+  /* position: relative; */
+  /* position: fixed; */
+  position: absolute;
+  /* position: sticky; */
+  /* top: 0; */
+  /* left: 50px; */
+  /* right: 50px; */
+  /* top: 20px; */
+  /* top: 0px; */
+  /* width: 100%; */
+  /* bottom: 20px; */
+  z-index: 1;
+}
+
+.div5 {
+  background-color: blue;
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  z-index: 3;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+.div6 {
+  background-color: red;
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  z-index: 2;
+
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
+.div7 {
+  background-color: black;
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  z-index: -1;
+
+  margin-top: 30px;
+  margin-left: 30px;
+}
