@@ -1,0 +1,59 @@
+div {
+  background-color: #5fe884;
+}
+
+/* rgb values */
+.div2 {
+  /* background-color: rgb(0, 255, 255); */
+  background-color: rgba(0, 255, 255, 0.3);
+}
+
+/* hex values */
+/* 0-9 a-f */
+.div3 {
+  background-color: #208bb3;
+}
+
+body {
+  height: 100vh;
+  background-color: #eee;
+  background-image: url('../images/pexels-bingqian-li-230971044-13518967.jpg');
+  /* background-size: contain; */
+  /* background-size: cover; */
+  background-size: 100px 100px;
+  background-repeat: repeat;
+  background-repeat: repeat-x;
+  background-repeat: repeat-y;
+  background-repeat: no-repeat;
+
+  background-position: center;
+  background-position: top;
+  /* background-position: bottom; */
+  /* background-position: left; */
+  /* background-position: right; */
+  /* background-position: top right; */
+  /* background-position: bottom left; */
+  background-attachment: scroll;
+  background-attachment: fixed;
+}
+
+#bg-img1 {
+  height: 100px;
+  width: 100px;
+  border: 1px solid;
+  background-image: url('https://images.pexels.com/photos/28606416/pexels-photo-28606416.jpeg');
+  background-size: contain;
+
+  background: red
+    url('https://images.pexels.com/photos/28606416/pexels-photo-28606416.jpeg')
+    contain fixed no-repeat;
+
+  margin-top: 20px;
+  box-shadow: 2px 4px 4px 2px;
+  box-shadow: -2px -4px 4px 2px;
+  box-shadow: 10px 10px 2px rgba(255, 0, 0, 0.2) inset;
+}
+
+h1 {
+  text-shadow: 2px 10px 2px rgba(10, 50, 30, 1);
+}
