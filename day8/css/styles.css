@@ -1,0 +1,85 @@
+h1 {
+  color: blue;
+}
+
+/* pseudo classes => :hover, :active :link, :focus, :first-child, :last-child, :nth-child() */
+a:link {
+  color: gray;
+}
+
+h1:hover {
+  background-color: black;
+}
+
+a:focus {
+  background-color: green;
+}
+
+a:active {
+  background-color: blueviolet;
+  color: skyblue;
+}
+
+ul li {
+  background-color: steelblue;
+  margin-bottom: 2px;
+  color: white;
+}
+
+ul li:first-child {
+  color: black;
+  background-color: red;
+  margin-bottom: 10px;
+}
+
+ul li:last-child {
+  font-size: 20px;
+}
+
+ul li:nth-child(4) {
+  text-decoration: line-through wavy gray;
+}
+
+ul li:nth-child(odd) {
+  text-decoration: overline wavy gray;
+  text-transform: uppercase;
+}
+
+/* pseudo elements => ::after, ::before, ::first-line ::first-letter */
+p::first-line {
+  text-transform: capitalize;
+}
+
+p::first-letter {
+  font-size: 32px;
+}
+
+p::after {
+  content: 'Hello';
+}
+
+p::before {
+  content: 'Welcome';
+}
+
+ul li {
+  background-color: initial;
+  margin-bottom: initial;
+  color: initial;
+}
+
+.nav li {
+  display: inline-block;
+}
+
+.nav li::after {
+  content: '';
+  display: block;
+  height: 5px;
+  width: 0;
+  background-color: black;
+}
+
+.nav li:hover::after {
+  width: 100%;
+}
