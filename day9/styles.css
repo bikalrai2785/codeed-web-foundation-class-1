@@ -1,0 +1,115 @@
+h1:hover {
+  background-color: skyblue;
+  color: white;
+
+  /* transition-property */
+  transition-property: background-color, color;
+  transition-property: background-color, color;
+  transition-duration: 1s;
+  /* transition-delay: 1s; */
+  /* linear, ease-in, ease-out, ease-in-out */
+  transition-timing-function: ease-in-out;
+
+  transition: all 5s 1s linear;
+}
+
+div {
+  border: 1px solid red;
+  height: 100px;
+  width: 100px;
+  transition: 1s;
+  margin: 20px auto;
+}
+
+/* transform  */
+.box1:hover {
+  transform: translateX(50px);
+}
+
+.box2:hover {
+  transform: translateY(50px);
+}
+
+.box3:hover {
+  transform: translate(-50px); /*applies to the x axis*/
+  transform: translate(-50px, -50px);
+}
+
+.box4:hover {
+  transform: rotateX(70deg);
+}
+
+.box5:hover {
+  transform: rotateY(70deg);
+}
+
+.box6:hover {
+  transform: rotate(120deg);
+}
+
+.box7:hover {
+  /* scale default value is 1 */
+  transform: scaleX(1.5);
+}
+
+.box8:hover {
+  transform: scaleY(1.5);
+}
+
+.box9:hover {
+  transform: scale(0.3);
+}
+
+.box10:hover {
+  transform: skewX(30deg);
+}
+
+.box11:hover {
+  transform: skewY(30deg);
+}
+
+.box12:hover {
+  transform: skew(30deg, 60deg);
+}
+
+/* animation */
+p {
+  height: 100px;
+  width: 100px;
+  position: relative;
+  /* background-color: red; */
+  border: 1px solid black;
+  animation-name: animate, move;
+  animation-duration: 5s;
+  animation-delay: 1s;
+  /* iteration count: number or inifinite */
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+}
+
+@keyframes animate {
+  from {
+    background-color: red;
+  }
+  to {
+    background-color: green;
+  }
+}
+
+@keyframes move {
+  0% {
+    left: 0;
+  }
+  50% {
+    left: 50%;
+    border-radius: 100%;
+    opacity: 0;
+  }
+  100% {
+    left: calc(100% - 100px);
+    transform: rotate(360deg);
+    border-radius: 0;
+    opacity: 1;
+  }
+}
