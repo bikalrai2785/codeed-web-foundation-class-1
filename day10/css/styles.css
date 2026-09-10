@@ -1,0 +1,60 @@
+img {
+  width: 200px;
+  height: auto;
+}
+
+/* break points */
+/* 
+mobile: 375px
+tablet: 768px
+laptop: 1024px
+desktop: 1440px
+ */
+
+/* max-width, min-width */
+/* max-width <-- this is the maximum width that a element can have */
+/* min-width <-- this is the minimum width that a element can have */
+@media (min-width: 375px) and (max-width: 768px) {
+  img {
+    width: 300px;
+    border-radius: 20px 30px 40px 50px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  img {
+    width: 400px;
+    transform: rotateY(30deg) skewY(20deg);
+  }
+}
+
+/* mobile first development */
+div {
+  height: 100px;
+  width: 100px;
+  background-color: red;
+  margin: 0 auto;
+}
+
+@media (min-width: 576px) {
+  div {
+    height: 200px;
+    width: 200px;
+    transform: rotate(20deg);
+  }
+}
+
+@media (min-width: 769px) {
+  div {
+    height: 400px;
+    width: 400px;
+    transform: perspective(200px) translate3d(20px, 50px, -200px);
+  }
+}
+
+@media (min-width: 1025px) {
+  div {
+    /* transform: rotate3d(4, 2, 5, 45deg); */
+    transform: scale3d(1.8, 0.5, 0.3);
+  }
+}
