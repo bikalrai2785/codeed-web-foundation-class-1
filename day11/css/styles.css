@@ -1,0 +1,76 @@
+.parent {
+  border: 2px solid red;
+  height: 200px;
+
+  /* to make flex box, we give the propery display of the value flex */
+  display: flex;
+
+  /* when a parent element is a flex box, we open these properties: */
+  /* flex-direction: ;
+  flex-wrap: ;
+  justify-content: ;
+  align-items: ;
+  align-content: ;
+  gap: ; */
+  /* flex-direction: row; */
+  /* flex-direction: column; */
+  /* flex-direction: row-reverse; */
+  /* flex-direction: column-reverse; */
+
+  /* justify content works on the main axis */
+  /* justify-content: flex-start; */
+  /* justify-content: flex-end; */
+  justify-content: center;
+  /* justify-content: space-around; */
+  /* justify-content: space-evenly; */
+  /* justify-content: space-between; */
+
+  /* align-items work on the cross axis */
+  /* align-items: stretch; */
+  /* align-items: flex-start; */
+  /* align-items: flex-end; */
+  /* align-items: center; */
+  /* align-items: baseline; */
+
+  /* gap: 20px; */
+
+  /* flex-wrap: nowrap; */
+  /* flex-wrap: wrap; */
+  /* flex-wrap: wrap-reverse; */
+
+  /* align-content: flex-start; */
+}
+
+/* when we give property of display flex to parent, it's children are flex items */
+.children {
+  background-color: skyblue;
+  border: 1px solid steelblue;
+  /* width: 100px; */
+
+  /* in flex items, we can give it flex basis, which is the same as width */
+  /* flex-basis: 200px; */
+  flex-grow: 1;
+}
+
+.children:nth-child(1) {
+  flex-grow: 5;
+}
+
+.children:nth-child(2) {
+}
+
+.children:nth-child(3) {
+  font-size: 32px;
+  flex-grow: 3;
+  flex-shrink: 10;
+}
+
+.children:nth-child(4) {
+  flex-shrink: 1;
+  /* flex-shrink: 3; */
+}
+
+.children:nth-child(5) {
+  /* flex: grow shrink flex-basis; */
+  flex: 2 0 auto;
+}
