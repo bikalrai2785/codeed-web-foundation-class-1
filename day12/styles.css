@@ -1,0 +1,112 @@
+.parent {
+  height: 100px;
+  border: 1px solid;
+  display: block;
+
+  /* flexbox is one directional */
+  /* flex-direction = row => main axis = X-axis */
+  /* flex-direction = row => cross axis = Y-axis */
+  display: flex;
+  flex-direction: row;
+  /* flex-direction: column; */
+  /* flex-direction: row-reverse; */
+  /* flex-direction: column-reverse; */
+  /* justify-content: flex-start; */
+  /* justify-content: flex-end; */
+  /* justify-content: center; */
+  /* justify-content: space-around; */
+  /* justify-content: space-evenly; */
+  /* justify-content: space-between; */
+
+  /* align-items: stretch; */
+  /* align-items: flex-start; */
+  /* align-items: flex-end; */
+  align-items: center;
+  /* align-items: baseline; */
+  /* gap: 20px; */
+  /* flex-wrap: nowrap; */
+  /* flex-wrap: wrap; */
+  /* flex-wrap: wrap-reverse; */
+}
+
+.flex-item {
+  display: block;
+  background-color: steelblue;
+  border: 1px solid orangered;
+  color: white;
+  /* width: 30px; */
+  flex-basis: 30px;
+  flex-grow: 1;
+
+  /* flex-shrink default value is 1 */
+  flex-shrink: 1;
+}
+
+.flex-item:first-child {
+  font-size: 32px;
+  align-self: stretch;
+  align-self: flex-start;
+  align-self: flex-end;
+  align-self: center;
+  /* align-self: baseline; */
+
+  /* flex-basis is the width of flex items */
+  flex-basis: 100px;
+  width: 100px;
+
+  /* flex-grow default value is 0 */
+  /* flex-grow: 1; */
+
+  flex-shrink: 5;
+  order: 0;
+  order: 3;
+}
+
+.flex-item:nth-child(2) {
+  order: 1;
+}
+
+.flex-item:nth-child(3) {
+  order: 1;
+  flex: 1 0 500px;
+}
+
+.flex-item:last-child {
+  flex-grow: 5;
+  order: 0;
+}
+
+/* .links {
+  text-align: center;
+}
+
+.link {
+  display: inline-block;
+  display: inline;
+  margin-left: 10px;
+  margin-right: 10px;
+} 
+*/
+
+.links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  color: green;
+}
+
+.link {
+}
+
+.cards {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.card {
+  width: 100px;
+  height: 100px;
+  background-color: azure;
+  border: 1px solid;
+}
