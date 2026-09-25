@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Javascript</title>
+  </head>
+  <body>
+    <script>
+      // print functions
+      // console.log()
+      // alert()
+      // document.write()
+
+      //   document.write("<h1>Hello world</h1>");
+
+      //   alert("THIS IS ALERT");
+
+      //   console.log("Hello World");
+
+      //   data types
+      // string => "", '', `` = "Hello World"
+      // number => 3.4 , 3
+      // null => nothing
+      // undefined => nothing is defined
+      // object => array or object
+      // boolean => true/false
+      // BigInt => exceed integer limit
+
+      console.log(`
+        hello there is something
+        asdasdsad
+      `);
+
+      console.log("hello there is something asdasdsad");
+
+      console.log(10);
+
+      console.log(7.1223232);
+
+      console.log(true);
+      console.log(false);
+
+      console.log(null);
+      console.log(undefined);
+
+      console.log(typeof "hello");
+      console.log(typeof 1);
+      console.log(typeof 2.5);
+      console.log(typeof null);
+      console.log(typeof undefined);
+      console.log(typeof false);
+
+      //   variables
+      // we store values in variables
+      // we use keywords such let and const to declare variables
+      // reassignment of const variables are not allowed
+      // let and const variables are block scoped
+
+      let a = 10;
+      const r = "some text";
+      const isThisTrue = true;
+      const snake_case = "Snake case";
+
+      console.log(a);
+      console.log(r);
+      console.log(isThisTrue);
+      console.log(snake_case);
+
+      a = false;
+
+      //   r = 10;
+
+      console.log(a);
+
+      //   console.log(r);
+
+      {
+      } //block
+
+      {
+        var b = 10;
+      }
+
+      console.log(b);
+
+      //   {
+      //     let d = 10;
+      //   }
+
+      //   console.log(d);
+
+      // operators:
+      // +, -, *, /, ** is exponent, % is modulo,
+      // ++ is increment, -- is decrement
+      console.log(3 / 2);
+
+      let num1 = 3;
+      console.log(num1 + 5);
+      console.log(num1 - 6);
+
+      const num2 = 6;
+      console.log(num1 * num2);
+
+      console.log(num2 ** 3);
+      console.log(num2 % 3);
+      console.log(num1++); //post incremennt
+      console.log(num1);
+      console.log(num1--); // post decrement
+      console.log(num1);
+      console.log(--num1); // pre decremnt
+      console.log(num1);
+      console.log(++num1); // pre increment
+
+      let num3 = 1;
+      let num4 = 5;
+
+      let num5 = num3 + num4;
+      console.log(num5);
+
+      //   num3 = num3 + num4;
+
+      num3 += num4;
+      console.log(num3);
+
+      console.log((num4 += 1));
+      console.log((num4 += 1));
+      //   num4 = num4 + 2
+      console.log((num4 += 2));
+
+      // comparison operators
+      // >, <, >=, <=, ==, ===, !=, !==
+      console.log(num1 > num2);
+      console.log(num1 < num2);
+
+      console.log(5 >= 5);
+      console.log(5 >= 6);
+      console.log(5 <= 6);
+      console.log(5 <= 5);
+      console.log(5 <= 4);
+
+      console.log(5 == 5);
+      console.log(5 === 5);
+      console.log("5" == 5);
+      console.log("5" === 5);
+      console.log("5" != 5);
+      console.log("5" !== 5);
+
+      // logical operators: && = and, || = or , ! = not
+    </script>
+  </body>
+</html>
