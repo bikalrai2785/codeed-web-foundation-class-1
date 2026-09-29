@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>array and loop</title>
+  </head>
+  <body>
+    <script>
+      // array
+      // syntax: [], eg: const a = []
+
+      const a = [];
+      console.log(a);
+      console.log(typeof a);
+
+      const b = ['red', 'orange', false, 3.1];
+      console.log(b);
+      console.log(b.length);
+      console.log(b[0]);
+      console.log(b[3]);
+      console.log(b[b.length - 1]);
+
+      const c = 'hello';
+      console.log(c[0]);
+
+      console.log(a);
+      a.push(true); // .push method inserts value to the end of the array
+      console.log(a);
+      a.push(45);
+      console.log(a);
+      a.unshift('front'); // .unshift inserts value to the front of the array
+      console.log(a);
+
+      a.pop(); // .pop removes value from the end of the array
+      console.log(a);
+      a.shift(); // .shift remove vlaue from the front of the array
+      console.log(a);
+
+      a.push(1);
+      a.push(2);
+      a.push(3);
+      console.log(a);
+      const val1 = a.pop();
+      console.log('a:', a);
+      console.log('val1:', val1);
+      console.log('val1: ' + val1);
+
+      let slicedA = a.slice(0);
+      console.log('SlicedA', slicedA);
+
+      slicedA = a.slice(0, 2);
+      console.log('SlicedA', slicedA);
+
+      slicedA = a.slice(2);
+      console.log('SlicedA', slicedA);
+
+      console.log(a.includes(true));
+      console.log(a.includes(3));
+
+      console.log(a.indexOf(true));
+
+      let num1 = 10;
+      console.log(num1 + '10'); // when we add number and string, it equals to string
+
+      console.log(num1 - 5);
+      console.log(num1 + parseInt('10'));
+      console.log(num1 + parseInt('10a'));
+      console.log(num1 + Number('22'));
+      console.log(num1 + Number('22a'));
+
+      // LOOPS
+      // for loop
+      //   syntax: for (initialization; evaluation; increment) {}
+
+      const array1 = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+      for (let i = 0; i < 9; i++) {
+        console.log(array1[i]);
+      }
+      console.log('===========');
+
+      for (let i = 0; i < array1.length; i++) {
+        console.log(array1[i]);
+      }
+
+      console.log('===');
+
+      for (let i = 0; i < array1.length; i++) {
+        if (array1[i] % 2 !== 0) {
+          console.log(array1[i]);
+        } else {
+          console.log('even');
+        }
+      }
+      console.log('=== decrement===');
+      for (let i = 8; i >= 0; i--) {
+        console.log(array1[i]);
+      }
+
+      for (let i = array1.length - 1; i >= 0; i--) {
+        console.log(array1[i]);
+      }
+
+      // while loop
+      //   syntax: while(true){
+      //     do this all the time
+      //   }
+
+      //   while (true) {
+      //     console.log(1);
+      //   }
+
+      let count = 0;
+      while (count !== 10) {
+        count++;
+        console.log('count:', count);
+      }
+
+      while (count < 11) {
+        count++;
+        console.log('count:', count);
+      }
+
+      // forEach loop
+      array1.forEach((value, index) => {
+        console.log(value, index);
+      });
+
+      array1.forEach((value) => {
+        console.log(value);
+      });
+    </script>
+  </body>
+</html>
