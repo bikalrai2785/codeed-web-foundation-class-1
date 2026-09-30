@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Object</title>
+  </head>
+  <body>
+    <script>
+      // object syntax:
+      // const objectName = {
+      //     property: value,
+      //     property: value
+      // }
+
+      const personObject = {
+        name: 'Bikal Rai',
+        favouriteColor: 'red',
+      };
+
+      console.log(personObject);
+
+      const personName = personObject.name;
+      console.log(personName);
+
+      const personNameAgain = personObject['name'];
+      console.log(personNameAgain);
+
+      console.log(personObject.favouriteColor);
+
+      const john = {
+        name: 'John',
+        age: 45,
+        hobbies: ['gaming', 'binge watching', 'singing'],
+        sings: () => {
+          console.log('John is singing');
+        },
+        cook: function (ingredient1, ingredient2) {
+          console.log(
+            `${this.name} is using ${ingredient1} and ${ingredient2} to make a dish`,
+          );
+        },
+      };
+
+      console.log(john.name);
+      console.log(john['age']);
+      console.log(john.hobbies);
+      console.log(john.hobbies[2]);
+      john.sings();
+      john.cook('Fish', 'tomato');
+
+      // string methods: .toUppercase(), .toLowercase(), .slice(), .length()
+      const string1 = 'hello world';
+      console.log(string1.toUpperCase());
+      console.log(string1.toLowerCase());
+      console.log(string1.slice(3));
+      console.log(string1.length);
+
+      const fullName = 'bikal rai';
+      const firstName = fullName.slice(0, 5);
+      console.log(firstName);
+
+      const firstNameCapitalized =
+        firstName[0].toUpperCase() + firstName.slice(1);
+      console.log(firstNameCapitalized);
+
+      const lastName = fullName.substring(6);
+      console.log(lastName);
+
+      const lastNameCapitalized =
+        lastName[0].toUpperCase() + lastName.slice(1).toLowerCase();
+
+      console.log(lastNameCapitalized);
+
+      const fullNameCapitalized =
+        firstNameCapitalized + ' ' + lastNameCapitalized;
+
+      console.log(fullNameCapitalized);
+
+      console.log(fullNameCapitalized.indexOf('l'));
+
+      const sometext = '     untrimmed     ';
+
+      console.log(sometext);
+      const trimmedText = sometext.trim();
+      console.log(trimmedText);
+    </script>
+  </body>
+</html>

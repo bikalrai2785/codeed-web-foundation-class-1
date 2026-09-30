@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Functions</title>
+  </head>
+  <body>
+    <script>
+      // three ways we can delcare functions
+      // 1) syntax: function functionName(){
+      // }
+
+      function sayHello() {
+        console.log('hello');
+      }
+
+      // call/invoke/execute/run
+      sayHello();
+
+      // 2) const functionName = function() {
+      //   }
+
+      const func2 = function () {
+        console.log('This is function 2');
+      };
+
+      func2();
+
+      //   3) const functionName = () => {
+      //   } this is also known as arrow function
+
+      const arrowFunc = () => {
+        console.log('arrow function');
+      };
+
+      arrowFunc();
+
+      const exampleArrowFunc = () => console.log('wow');
+
+      exampleArrowFunc();
+
+      // types of function:
+      // 1) non-parameterized function
+      //   function nonParameterized() {
+
+      //   }
+
+      // 2) paremeterized function
+      //   function parameterized(parameter1, parameter2, ..., parameterN) {
+
+      //   }
+
+      // 3) non-parameterized return function
+      // function returnNonParameterized(){
+      //     return
+      // }
+
+      // 4)paremeterized return function
+      //   function parameterized(parameter1, parameter2, ..., parameterN) {
+      // return
+      //   }
+
+      // example of paratmeterized function
+      function parameterized(param1, param2) {
+        console.log(param1 + param2);
+      }
+
+      parameterized(1, 2);
+
+      // we can also add default values to parameters
+      function addNumbers(num1, num2, num3 = 2) {
+        console.log(num1 + num2 + num3);
+      }
+
+      addNumbers(3, 4, 5);
+      addNumbers(4, 4, 4);
+      addNumbers(2, 3);
+
+      // example function with return statement and without parameters
+      function returnFunction() {
+        console.log('Before return statement');
+
+        return 'Returned Something';
+
+        console.log('After return statement');
+      }
+
+      const val = returnFunction();
+      console.log(val);
+      console.log(returnFunction());
+
+      // example of function with return statement and with parameters
+      function returnWithParameters(arr1) {
+        let count = 0;
+
+        for (let i = 0; i < arr1.length; i++) {
+          count += arr1[i];
+        }
+
+        return count;
+      }
+
+      const array1 = [1, 2, 3, 4, 5];
+
+      console.log(returnWithParameters(array1));
+
+      (() => {
+        console.log('anonymous function');
+      })();
+
+      (function () {
+        console.log('anonymous function 2');
+      })();
+
+      // switch case: we can have any number of cases
+      // syntax:
+      //  switch(expression) {
+      //     case val:
+      //         code
+      //         break;
+      //     case val2:
+      //         code
+      //         break
+      //     default:
+      //         do something by default
+      //  }
+
+      const day = 1;
+
+      switch (day) {
+        case 1:
+          console.log('Sunday');
+          break;
+        case 2:
+          console.log('Monday');
+          break;
+        case 3:
+          console.log('Tuesday');
+          break;
+        case 4:
+          console.log('Wednesday');
+          break;
+        case 5:
+          console.log('Thursday');
+          break;
+        case 6:
+          console.log('Friday');
+          break;
+        case 7:
+          console.log('Saturday');
+          break;
+        default: {
+          console.log('No such day');
+        }
+      }
+    </script>
+  </body>
+</html>
