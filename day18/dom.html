@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document Object Model</title>
+    <style>
+      .myStyle {
+        background-color: red;
+        color: white;
+        transition: 1s;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="hello" class="hello">Hello</div>
+
+    <div class="empty"></div>
+    <button id="add">Add Class</button>
+    <button id="remove">Remove Class</button>
+    <button id="toggle">Toggle Class</button>
+
+    <hr />
+    <br />
+    <form name="registration-form">
+      <div>
+        <label for="fullName">Fullname:</label>
+        <input
+          type="text"
+          placeholder="Enter fullname"
+          name="fullName"
+          value="Full name"
+        />
+      </div>
+      <div>
+        <label for="email">Email:</label>
+        <input type="email" placeholder="Enter email" name="email" />
+      </div>
+      <div>
+        <label for="password">Password:</label>
+        <input type="password" placeholder="Enter password" name="password" />
+      </div>
+      <div>
+        <label for="password">Confirm password:</label>
+        <input
+          type="password"
+          placeholder="Enter confirm password"
+          name="cPassword"
+        />
+      </div>
+
+      <button>Submit</button>
+    </form>
+    <script>
+      // How to select elements in the DOM
+      // 1) .getElementById()
+      // 2) .querySelector()
+
+      // to target and select the div element with id hello
+      const idHello = document.getElementById('hello');
+      console.log(idHello);
+
+      //   to target and select the div element with id or class using querySelector
+      const querySelectedClass = document.querySelector('.hello');
+      const querySelectedId = document.querySelector('#hello');
+
+      console.log(querySelectedClass);
+      console.log(querySelectedId);
+
+      idHello.style.backgroundColor = 'red';
+      idHello.style.color = 'white';
+      querySelectedClass.style.width = '100px';
+
+      // how to create element in the dom
+      const createdParagraph = document.createElement('p');
+      console.log(createdParagraph);
+
+      // how to set text to any html element
+      querySelectedId.textContent = 'Bye';
+      createdParagraph.innerText = 'This is paragraph';
+      createdParagraph.innerHTML = 'This is using innerHtml';
+      createdParagraph.innerHTML = '<h1>Paragraph</h1>';
+
+      // how set the created element to the dom
+      document.body.appendChild(createdParagraph);
+
+      const emptyDiv = document.querySelector('.empty');
+      emptyDiv.appendChild(createdParagraph);
+
+      //   emptyDiv.style.backgroundColor = 'red';
+
+      // we can add clases, remove classes and toggle classes
+      // we talking about event, such as, hover, scroll, clicks and etc
+      const addBtn = document.getElementById('add');
+      const removeBtn = document.getElementById('remove');
+      const toggleBtn = document.getElementById('toggle');
+
+      // event attach syntax: document.addEventListener("event", callBack Function)
+      // example
+      addBtn.addEventListener('click', function () {
+        emptyDiv.classList.add('myStyle');
+      });
+
+      removeBtn.addEventListener('mouseenter', () => {
+        emptyDiv.classList.remove('myStyle');
+      });
+
+      toggleBtn.addEventListener('click', () => {
+        emptyDiv.classList.toggle('myStyle');
+      });
+
+      // form
+      console.log(document.forms['registration-form']);
+
+      const myForm = document.forms['registration-form'];
+
+      myForm.addEventListener('submit', function (event) {
+        event.preventDefault();
+
+        const fullName = myForm.fullName.value;
+        const email = myForm.email.value;
+        const password = myForm.password.value;
+        const cPassword = myForm.cPassword.value;
+
+        if (fullName === '' || email === '' || password === '') {
+          alert('Fullname, email or password cannot be empty');
+        }
+
+        if (password !== cPassword) {
+          alert('Passwords do not match');
+        }
+      });
+    </script>
+  </body>
+</html>
