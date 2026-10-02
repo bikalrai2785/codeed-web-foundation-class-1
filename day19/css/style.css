@@ -1,0 +1,9 @@
+.todo-container {
+  border: 1px solid;
+  width: fit-content;
+}
+
+.todo {
+  outline: none;
+  border: none;
+}
