@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 :root {
   --bg-color: #fafafa;
@@ -14,12 +14,17 @@
 }
 
 html {
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
 }
 
 body {
   min-height: 100vh;
   background-color: var(--bg-color);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
 .container {
@@ -54,9 +59,70 @@ body {
   display: none;
 }
 
+#header nav {
+  background-color: gray;
+}
+
 #header nav .wrapper {
   padding: 24px 32px;
   display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#header nav .wrapper .brand {
+  display: flex;
+  align-items: center;
+  gap: 120px;
+}
+
+#header nav .wrapper .brand h1 {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+#header nav .wrapper .brand .links {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+#header nav .wrapper .actions {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+#header nav .wrapper .actions .cta,
+#header nav .wrapper .actions .socials {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+#header .hero {
+  height: 80vh;
+}
+
+#header .hero .wrapper {
+  height: 100%;
+  display: flex;
+}
+
+#header .hero .wrapper .hero-info {
+  flex: 1;
+}
+
+#header .hero .wrapper .hero-img {
+  flex: 1;
+  height: 100%;
+  width: 100%;
+}
+
+#header .hero .wrapper .hero-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 @media (min-width: 1024px) {
