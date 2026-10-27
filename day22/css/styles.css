@@ -1,0 +1,11 @@
+.fs-1 {
+  font-size: 100px !important;
+}
+
+.flex-item {
+  transition: 0.5s;
+}
+
+.flex-item:hover {
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, 1);
+}
