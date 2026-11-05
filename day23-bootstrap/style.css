@@ -1,0 +1,16 @@
+/* h1 {
+  width: 500px;
+  margin: auto;
+} */
+
+/* Change background of the header button when expanded */
+.accordion-button:not(.collapsed) {
+  background-color: #3b5d89 !important; /* Change to your desired color */
+  color: #1e293b !important; /* Change text color if needed */
+  box-shadow: none !important; /* Removes default Bootstrap focus shadow */
+}
+
+/* Optional: Change background of the expanded accordion body */
+.accordion-collapse.show .accordion-body {
+  background-color: #2d3338; /* Change to your desired body background */
+}
