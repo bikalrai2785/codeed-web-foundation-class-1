@@ -1,0 +1,54 @@
+@use "../helper/variable" as vars;
+
+// .btn-primary {
+//   border: none;
+//   padding: vars.$app-button-padding-sm;
+//   background-color: vars.$primary-color;
+//   color: white;
+//   border-radius: 2px;
+// }
+
+// mixin
+// @mixin btn {
+//   border: none;
+//   padding: vars.$app-button-padding-sm;
+//   background-color: vars.$primary-color;
+//   color: white;
+//   border-radius: 2px;
+
+//   &:hover {
+//     background-color: vars.$secondary-color;
+//   }
+
+// }
+
+// .btn-primary {
+//   @include btn;
+// }
+
+@mixin btn($bg-color, $text-color, $hover-bg) {
+  border: none;
+  padding: vars.$app-button-padding-sm;
+  background-color: $bg-color;
+  color: $text-color;
+  border-radius: 2px;
+  transition:
+    background-color 0.3s,
+    color 0.3s;
+
+  &:hover {
+    background-color: $hover-bg;
+  }
+}
+
+.btn-primary {
+  @include btn(
+    vars.$primary-color,
+    vars.$app-text-light,
+    vars.$secondary-color
+  );
+}
+
+.btn-secondary {
+  @include btn(vars.$secondary-color, vars.$app-text-light, black);
+}

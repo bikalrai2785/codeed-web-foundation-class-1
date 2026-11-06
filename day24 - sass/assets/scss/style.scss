@@ -1,0 +1,33 @@
+@use "./helper/helper";
+// @use "./helper/variable" as vars;
+@use "./component/component";
+
+// .products .product {
+//   width: 280px;
+//   background-color: lightblue;
+// }
+
+// .products .product .img {
+//   width: 100%;
+// }
+
+// .products {
+//   display: grid;
+
+//   .product {
+//     width: 300px;
+//     background-color: lightcoral;
+
+//     .img {
+//       width: 100%;
+//     }
+
+//     .details {
+//       background-color: aquamarine;
+//     }
+
+//     button {
+//       padding: vars.$app-button-padding-sm;
+//     }
+//   }
+// }
